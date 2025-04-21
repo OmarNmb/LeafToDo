@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #373D20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewMyProfileController">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="18.0" prefHeight="664.0" prefWidth="964.0" style="-fx-background-radius: 40; -fx-background-color: #EFF1ED;">
+         <children>
+            <ImageView fx:id="imaAccount01" fitHeight="164.0" fitWidth="175.0" layoutX="675.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/account01.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblMessageLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="242.0" prefHeight="40.0" prefWidth="820.0" textAlignment="CENTER" textFill="#860000" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#373d20" height="50.0" layoutX="35.0" layoutY="74.0" stroke="#373d20" strokeWidth="0.0" width="450.0" />
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/userName.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUsername" editable="false" layoutX="86.0" layoutY="74.0" prefHeight="50.0" prefWidth="400.0" promptText="Username" style="-fx-background-radius: 30; -fx-background-color: #373D20; -fx-prompt-text-fill: #ffffff;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#373d20" height="50.0" layoutX="35.0" layoutY="157.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" />
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="46.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/email.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtEmail" editable="false" layoutX="86.0" layoutY="157.0" prefHeight="50.0" prefWidth="400.0" promptText="Email" style="-fx-background-color: #373d20; -fx-background-radius: 30; -fx-prompt-text-fill: #ffffff;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Rectangle fx:id="rectanglePassword1" arcHeight="50.0" arcWidth="50.0" fill="#bfbdbe" height="50.0" layoutX="35.0" layoutY="421.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="450.0" />
+            <ImageView fx:id="imgCurrentPassword" fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/passwordImg.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtCurrentPassword" layoutX="86.0" layoutY="421.0" prefHeight="50.0" prefWidth="400.0" promptText="Current Password" style="-fx-background-radius: 30; -fx-background-color: #bfbdbe; -fx-prompt-text-fill: #737373;" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </PasswordField>
+            <Rectangle fx:id="rectanglePassword2" arcHeight="50.0" arcWidth="50.0" fill="#bfbdbe" height="50.0" layoutX="35.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="450.0" />
+            <PasswordField fx:id="txtNewPassword" layoutX="86.0" layoutY="486.0" prefHeight="50.0" prefWidth="400.0" promptText="New Password" style="-fx-background-radius: 30; -fx-background-color: #bfbdbe; -fx-prompt-text-fill: #737373;" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </PasswordField>
+            <ImageView fx:id="imgNewPassword" fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/passwordImg.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="rectanglePassword3" arcHeight="50.0" arcWidth="50.0" fill="#bfbdbe" height="50.0" layoutX="35.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="450.0" />
+            <PasswordField fx:id="txtConfirmNewPassword" layoutX="86.0" layoutY="553.0" prefHeight="50.0" prefWidth="400.0" promptText="Comfirm New Password" style="-fx-background-radius: 30; -fx-background-color: #bfbdbe; -fx-prompt-text-fill: #737373;" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </PasswordField>
+            <ImageView fx:id="imgConfirmNewPassword" fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/passwordImg.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnUpdateUsername" alignment="CENTER" layoutX="629.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleBtnUpdateUsername" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text="Update Username" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdateEmail" alignment="CENTER" layoutX="629.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleBtnUpdateEmail" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text="Update Email" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdatePassword" alignment="CENTER" layoutX="629.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleBtnUpdatePassword" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text="Update Password" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConfirmUpdateUsername" alignment="CENTER" layoutX="529.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleBtnConfirmUpdateUsername" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #232222; -fx-background-radius: 30;" text="Comfirm update" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelUpdateUsername" alignment="CENTER" layoutX="529.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleBtnCancelUpdateUserName" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #232222; -fx-background-radius: 30;" text="Cancel update" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConfirmUpdatePassword" alignment="CENTER" layoutX="529.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleBtnConfirmUpdatePassword" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #232222; -fx-background-radius: 30;" text="Comfirm update" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelUpdatePassword" alignment="CENTER" layoutX="529.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleBtnCancelUpdatePassword" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #232222; -fx-background-radius: 30;" text="Cancel update" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConfirmUpdateEmail" alignment="CENTER" layoutX="529.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleBtnConfirmUpdateEmail" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #232222; -fx-background-radius: 30;" text="Comfirm update" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelUpdateEmail" alignment="CENTER" layoutX="529.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleBtnCancelUpdateEmail" prefHeight="50.0" prefWidth="283.0" style="-fx-background-color: #232222; -fx-background-radius: 30;" text="Cancel update" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <VBox layoutX="65.0" layoutY="315.0" prefHeight="164.0" prefWidth="362.0" style="-fx-background-color: #373D20; -fx-border-radius: 10; -fx-background-radius: 10;">
+               <children>
+                  <Label id="homeButton" fx:id="goHome" prefHeight="42.0" prefWidth="384.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text=" Home" textFill="WHITE">
+                     <font>
+                        <Font name="Liberation Serif Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="taskListButton" fx:id="goTasksList" prefHeight="42.0" prefWidth="374.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text=" Tasks List" textFill="WHITE">
+                     <font>
+                        <Font name="Liberation Serif Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="logOutButton" fx:id="goLogOut1" prefHeight="42.0" prefWidth="424.0" style="-fx-border-color: #ffffff; -fx-border-radius: 5;" text=" Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="Liberation Serif Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewLoginController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="476.0" layoutX="258.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/intlogin.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUsername" layoutX="358.0" layoutY="434.0" prefHeight="51.0" prefWidth="367.0" promptText="Username" style="-fx-background-radius: 30; -fx-background-color: #bfbdbe; -fx-prompt-text-fill: #737373;">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtPassword" layoutX="358.0" layoutY="527.0" prefHeight="51.0" prefWidth="367.0" promptText="Password" style="-fx-background-radius: 30; -fx-background-color: #bfbdbe; -fx-prompt-text-fill: #737373;">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </PasswordField>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="66.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/passwordImg.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" alignment="CENTER" layoutX="481.0" layoutY="606.0" mnemonicParsing="false" onAction="#handleBtnLogin" prefHeight="51.0" prefWidth="228.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text=" Log in" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNewAccount" layoutX="271.0" layoutY="620.0" mnemonicParsing="false" onAction="#handleBtnNewAccount" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: #737373;" text="Sign Up">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="271.0" layoutY="595.0" prefHeight="21.0" prefWidth="166.0" text="Don't have an account?" textFill="#848383">
+         <font>
+            <Font name="Liberation Serif Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
