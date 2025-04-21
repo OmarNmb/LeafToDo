@@ -1,5 +1,5 @@
 
-![TODO APP](src/main/resources/images/Leaf ToDo.png)
+![TODO APP](src/main/resources/images/Leaf%20ToDo.png)
 
 
 In this project, we have created a simple task application using JavaFX. The app allows users to add, delete, mark tasks as completed, and classify tasks into different categories.
@@ -22,8 +22,8 @@ This project was built using the following technologies:
 You can clone the project and run it using the following commands:
 
 ```bash
-git clone 
-cd db2-team-
+git clone https://github.com/OmarNmb/LeafToDo.git
+cd db2-team-2
 mvn clean javafx:run
 ```
  
@@ -37,6 +37,7 @@ You need to have the following installed on your machine:
 The authors of this project are:
 
 - [Omar Suaréz](https://gitlab.com/OmarNmb)
- 
+  [Victor Gandarilla](https://gitlab.com/OmarNmb)
+- [Hugo Naranjo](https://gitlab.com/OmarNmb)
 <!--End of readme-->
 
