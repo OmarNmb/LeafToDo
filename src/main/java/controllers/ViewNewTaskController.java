@@ -82,7 +82,7 @@ public class ViewNewTaskController {
             alert.show();
 
             Scene currentScene = btnAddNewTask.getScene();
-            SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, currentScene);
+            SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, btnAddNewTask);
           }
         } else {
           lblMessageNewTask.setText("The expiration date must not be less than the current expiration date.");
@@ -97,7 +97,7 @@ public class ViewNewTaskController {
       alert.show();
 
       Scene currentScene = btnAddNewTask.getScene();
-      SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, currentScene);
+      SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, btnAddNewTask);
     }
 
   }
@@ -111,7 +111,7 @@ public class ViewNewTaskController {
     }
 
     Scene currentScene = btnCancelAddTask.getScene();
-    SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, currentScene);
+    SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, btnCancelAddTask);
   }
 
   private void createTask() {
@@ -137,6 +137,7 @@ public class ViewNewTaskController {
         ViewCustomDateAndTime controller = loader.getController();
         controller.initData(newTask.getName());
 
+        stage.sizeToScene();
         stage.show();
 
       } catch (IOException e) {

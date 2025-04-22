@@ -155,4 +155,81 @@ public class TaskServices {
       e.printStackTrace();
     }
   }
+
+  public int getTotalTasks() {
+    String query = "{CALL GetTotalTasks}";
+    int total = 0;
+
+    try (Connection conn = SQLConnection.getConnection();
+         CallableStatement stmt = conn.prepareCall(query);
+         ResultSet rs = stmt.executeQuery()) {
+      if (rs.next()) {
+        total = rs.getInt("TotalTasks");
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    return total;
+  }
+
+  public int getCompletedTasks() {
+    String query = "{CALL GetCompletedTasks1}";
+    int total = 0;
+
+    try (Connection conn = SQLConnection.getConnection();
+         CallableStatement stmt = conn.prepareCall(query);
+         ResultSet rs = stmt.executeQuery()) {
+      if (rs.next()) {
+        total = rs.getInt("CompletedTasks");
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    return total;
+  }
+
+  public int getTotalTasksByUser(int userId) {
+    String query = "{CALL GetTotalTasksByUser(?)}";
+    int totalTasks = 0;
+
+    try (Connection conn = SQLConnection.getConnection();
+         CallableStatement stmt = conn.prepareCall(query)) {
+
+      stmt.setInt(1, userId);
+      ResultSet rs = stmt.executeQuery();
+
+      if (rs.next()) {
+        totalTasks = rs.getInt("TotalTasks");
+      }
+
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    return totalTasks;
+  }
+
+  public int getCompletedTasksByUser(int userId) {
+    String query = "{CALL GetCompletedTasksByUser(?)}";
+    int completedTasks = 0;
+
+    try (Connection conn = SQLConnection.getConnection();
+         CallableStatement stmt = conn.prepareCall(query)) {
+
+      stmt.setInt(1, userId);
+      ResultSet rs = stmt.executeQuery();
+
+      if (rs.next()) {
+        completedTasks = rs.getInt("CompletedTasks");
+      }
+
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    return completedTasks;
+  }
+
 }

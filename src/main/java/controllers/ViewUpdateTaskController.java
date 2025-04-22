@@ -78,7 +78,7 @@ public class ViewUpdateTaskController {
   @FXML
   private void handleBtnCancelUpdateTask() {
     Scene currentScene = btnCancelUpdateTask.getScene();
-    SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, currentScene);
+    SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, btnCancelUpdateTask);
   }
 
   @FXML
@@ -118,7 +118,7 @@ public class ViewUpdateTaskController {
       alert.show();
 
       Scene currentScene = btnUpdateTask.getScene();
-      SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, currentScene);
+      SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, btnUpdateTask);
     } else {
       lblMessageNewTask.setText("Please update a field or cancel if you no longer want to update anything.");
     }

@@ -66,7 +66,7 @@ public class CategoryServices {
 
   public int getID(String categoryName) {
     int IDCategory = 0;
-    String query = "SELECT IDCategory WHERE Name = ?";
+    String query = "SELECT IDCategory FROM Category WHERE Name = ?";
     try (Connection conn = SQLConnection.getConnection()) {
       PreparedStatement statement = conn.prepareStatement(query);
       statement.setString(1, categoryName);
