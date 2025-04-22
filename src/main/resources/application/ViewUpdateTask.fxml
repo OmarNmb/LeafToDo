@@ -16,9 +16,9 @@
    <children>
       <Pane prefHeight="563.0" prefWidth="465.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #BCBD8B;">
          <children>
-            <Label layoutX="167.0" layoutY="14.0" text="Edit Task" textFill="#373d20">
+            <Label layoutX="163.0" layoutY="14.0" text="Edit Task" textFill="#373d20">
                <font>
-                  <Font name="Liberation Serif Bold" size="31.0" />
+                  <Font name="System Bold" size="31.0" />
                </font>
             </Label>
             <VBox layoutX="21.0" layoutY="67.0" prefHeight="408.0" prefWidth="423.0">
@@ -54,23 +54,23 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Spinner fx:id="spinnerMinutes" prefHeight="43.0" prefWidth="150.0" />
+                  <Spinner fx:id="spinnerHours" prefHeight="40.0" prefWidth="150.0" />
                   <Label text="Minutes">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Spinner fx:id="spinnerHours" prefHeight="40.0" prefWidth="150.0" />
+                  <Spinner fx:id="spinnerMinutes" prefHeight="43.0" prefWidth="150.0" />
                </children>
             </VBox>
-            <Button fx:id="btnUpdateTask" layoutX="22.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleBtnUpdateTask" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text="Update Task" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnUpdateTask" layoutX="22.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleBtnUpdateTask" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #373D20; -fx-background-radius: 30;" text="Update Task" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancelUpdateTask" layoutX="244.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleBtnCancelUpdateTask" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnCancelUpdateTask" layoutX="244.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleBtnCancelUpdateTask" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #373D20; -fx-background-radius: 30;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
          </children>
