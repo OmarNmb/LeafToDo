@@ -16,7 +16,7 @@
    <children>
       <Pane prefHeight="563.0" prefWidth="465.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #BCBD8B;">
          <children>
-            <Label layoutX="167.0" layoutY="14.0" text="Edit Task" textFill="#373d20">
+            <Label layoutX="163.0" layoutY="14.0" text="Edit Task" textFill="#373d20">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>
