@@ -23,6 +23,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 import model.Task;
 import utils.SceneHelper;
 import utils.SQLConnection.SQLConnection;
@@ -104,8 +105,7 @@ public class ViewCard {
 
       if (task != null) {
         taskServices.deleteTask(task);
-        Scene currScene = deleteButton.getScene();
-        SceneHelper.changeScene(utils.Paths.VIEW_MAIN_INTERFACE, currScene);
+        SceneHelper.changeScene(utils.Paths.VIEW_MAIN_INTERFACE, deleteButton);
       }
     }
   }
@@ -123,6 +123,9 @@ public class ViewCard {
       controller.init(idTask);
 
       currentScene.setRoot(root);
+
+      Stage stage = (Stage) currentScene.getWindow();
+      stage.sizeToScene();
     } catch (IOException ex) {
       ex.printStackTrace();
     }
@@ -145,6 +148,8 @@ public class ViewCard {
       System.out.println(e.getMessage());
     }
     update();
+    SceneHelper.changeScene(utils.Paths.VIEW_MAIN_INTERFACE, deleteButton);
+
   }
 
   public HBox getModel() {

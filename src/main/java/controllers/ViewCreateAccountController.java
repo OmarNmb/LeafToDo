@@ -63,7 +63,7 @@ public class ViewCreateAccountController {
   }
 
   private void backToLogin() {
-    SceneHelper.changeScene(Paths.VIEW_LOGIN, btnLoginNow.getScene());
+    SceneHelper.changeScene(Paths.VIEW_LOGIN, btnLoginNow);
   }
 
   private void createAccount() {

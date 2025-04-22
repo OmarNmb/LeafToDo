@@ -5,10 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import Services.TaskServices;
+import Services.UserServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
@@ -30,6 +33,20 @@ import Services.SessionServices;
 
 public class ViewMainInterface {
 
+
+  private UserServices userServices;
+
+  private User currentUser;
+
+  @FXML
+  private VBox taskListUserBox;
+
+  @FXML
+  private Button btnUser;
+
+  @FXML
+  private Label nameUser;
+
   @FXML
   private VBox ScrollVBox;
 
@@ -45,10 +62,17 @@ public class ViewMainInterface {
   @FXML
   private Button btnAddTask;
 
+  @FXML
+  private Label no_TasksCompleted;
+
+  @FXML
+  private Label no_AllTasks;
+
   // Inicializar
   @FXML
   void initialize() throws SQLException, JsonMappingException, JsonProcessingException {
-    assert ScrollVBox != null
+
+    assert taskListUserBox != null
       : "fx:id=\"ScrollVBox\" was not injected: check your FXML file 'ViewMainInterface.fxml'.";
     assert logoutButton != null
       : "fx:id=\"logoutButton\" was not injected: check your FXML file 'ViewMainInterface.fxml'.";
@@ -100,7 +124,7 @@ public class ViewMainInterface {
               task.setID((int) taskMap.get("IDTask"));
               HBox card;
               card = task.getModel();
-              ScrollVBox.getChildren().add(card);
+              taskListUserBox.getChildren().add(card);
             }
           }
 
@@ -112,6 +136,20 @@ public class ViewMainInterface {
     } catch (SQLException e) {
       System.out.println("Error al establecer la conexion: " + e.getMessage());
     }
+
+    userServices = new UserServices();
+    currentUser = SessionServices.getCurrentUser();
+
+    String currentUserName = currentUser.getUserName();
+    nameUser.setText(currentUserName);
+
+    TaskServices taskServices = new TaskServices();
+    int totalTasks = taskServices.getTotalTasksByUser(currentUser.getIDUser());
+    int completedTasks = taskServices.getCompletedTasksByUser(currentUser.getIDUser());
+
+    no_AllTasks.setText(Integer.toString(totalTasks));
+    no_TasksCompleted.setText(Integer.toString(completedTasks));
+
   }
 
   @FXML
@@ -120,19 +158,19 @@ public class ViewMainInterface {
     SessionServices.logout();
     // Cargar ViewLogin
     Scene currScene = logoutButton.getScene();
-    SceneHelper.changeScene(Paths.VIEW_LOGIN, currScene);
+    SceneHelper.changeScene(Paths.VIEW_LOGIN, logoutButton);
   }
 
   @FXML
   void handleBtnAddTaskAction(ActionEvent e) {
     Scene currentScene = btnAddTask.getScene();
-    SceneHelper.changeScene(Paths.VIEW_ADD_NEW_TASK, currentScene);
+    SceneHelper.changeScene(Paths.VIEW_ADD_NEW_TASK, btnAddTask);
   }
 
   @FXML
   void handleUserButton(ActionEvent e) {
-    Scene currentScene = userButton.getScene();
-    SceneHelper.changeScene(Paths.VIEW_MY_PROFILE, currentScene);
+    Scene currentScene = btnUser.getScene();
+    SceneHelper.changeScene(Paths.VIEW_MY_PROFILE, btnUser);
   }
 
 

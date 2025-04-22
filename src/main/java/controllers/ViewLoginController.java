@@ -77,7 +77,7 @@ public class ViewLoginController {
     if (loggedIn) {
       System.out.println("Login Successful");
       Scene currentScene = btnNewAccount.getScene();
-      SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, currentScene);
+      SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, btnNewAccount);
     } else {
       lblMessageLogin.setText("Invalid Login. Please try again.");
     }

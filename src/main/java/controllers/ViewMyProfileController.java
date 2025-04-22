@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
 import model.User;
 import utils.Paths;
@@ -17,6 +18,19 @@ import utils.SceneHelper;
 import utils.Validator;
 
 public class ViewMyProfileController {
+
+  @FXML
+  private Label goLogOut;
+
+  @FXML
+  private Label goHome;
+
+  @FXML
+  private Button btnUpdateEmail;
+
+  @FXML
+  private Button btnUpdateUsername;
+
   private UserServices userServices;
 
   private User currentUser;
@@ -95,7 +109,7 @@ public class ViewMyProfileController {
   @FXML
   private void handleBtnCancel(ActionEvent e) {
     Scene currentScene = btnCancel.getScene();
-    SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, currentScene);
+    SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, btnCancel);
   }
 
   @FXML
@@ -108,7 +122,7 @@ public class ViewMyProfileController {
 
     btnConfirmUpdateUsername.setVisible(true);
     btnCancelUpdateUsername.setVisible(true);
-    btnUpdatePassword.setVisible(false);
+    btnUpdateUsername.setVisible(false);
   }
 
   @FXML
@@ -143,6 +157,7 @@ public class ViewMyProfileController {
 
       btnConfirmUpdateUsername.setVisible(false);
       btnCancelUpdateUsername.setVisible(false);
+      btnUpdateUsername.setVisible(true);
     }
 
   }
@@ -159,7 +174,7 @@ public class ViewMyProfileController {
 
     btnConfirmUpdateUsername.setVisible(false);
     btnCancelUpdateUsername.setVisible(false);
-    btnUpdatePassword.setVisible(true);
+    btnUpdateUsername.setVisible(true);
 
     lblMessageLogin.setText("");
   }
@@ -275,7 +290,7 @@ public class ViewMyProfileController {
 
     btnConfirmUpdateEmail.setVisible(true);
     btnCancelUpdateEmail.setVisible(true);
-    btnUpdatePassword.setVisible(false);
+    btnUpdateEmail.setVisible(false);
   }
 
   @FXML
@@ -315,7 +330,7 @@ public class ViewMyProfileController {
 
       btnConfirmUpdateEmail.setVisible(false);
       btnCancelUpdateEmail.setVisible(false);
-      btnUpdatePassword.setVisible(true);
+      btnUpdateEmail.setVisible(true);
       txtCurrentPassword.setText("");
 
       lblMessageLogin.setText("");
@@ -333,8 +348,20 @@ public class ViewMyProfileController {
 
     btnConfirmUpdateEmail.setVisible(false);
     btnCancelUpdateEmail.setVisible(false);
-    btnUpdatePassword.setVisible(true);
+    btnUpdateEmail.setVisible(true);
 
     lblMessageLogin.setText("");
+  }
+
+  @FXML
+  private void handleBtnGoHome(MouseEvent e) {
+    Scene currentScene = goHome.getScene();
+    SceneHelper.changeScene(Paths.VIEW_MAIN_INTERFACE, goHome);
+  }
+
+  @FXML
+  private void handleBtnLogOut(MouseEvent e) {
+    Scene currentScene = goHome.getScene();
+    SceneHelper.changeScene(Paths.VIEW_LOGIN, goHome);
   }
 }

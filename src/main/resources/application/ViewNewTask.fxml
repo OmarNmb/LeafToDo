@@ -12,63 +12,63 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewNewTaskController">
+<AnchorPane prefHeight="603.0" prefWidth="898.0" style="-fx-background-color: #BCBD8B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewNewTaskController">
    <children>
-      <AnchorPane layoutX="50.0" layoutY="40.0" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #BCBD8B; -fx-background-radius: 10; -fx-border-radius: 10;">
+      <AnchorPane layoutX="12.0" layoutY="42.0" prefHeight="520.0" prefWidth="877.0" style="-fx-background-color: #373D20; -fx-border-color: #373D20; -fx-background-radius: 10; -fx-border-radius: 10;">
          <children>
-            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="50.0" layoutX="20.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" />
-            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="25.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="52.0" layoutX="26.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" />
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="31.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/TaskNameIcon.png" />
                </image>
             </ImageView>
-            <TextField fx:id="txtNewTaskName" layoutX="70.0" layoutY="145.0" prefHeight="50.0" prefWidth="400.0" promptText="Task name" style="-fx-background-color: #ffffff; -fx-background-radius: 30; -fx-prompt-text-fill: #737373;">
+            <TextField fx:id="txtNewTaskName" layoutX="76.0" layoutY="113.0" prefHeight="50.0" prefWidth="400.0" promptText="Task name" style="-fx-background-color: #ffffff; -fx-background-radius: 30; -fx-prompt-text-fill: #737373;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <DatePicker fx:id="datePickExpirationDate" editable="false" layoutX="497.0" layoutY="145.0" prefHeight="50.0" prefWidth="350.0" promptText="Expiration Date" style="-fx-font-size: 24;" />
-            <Button fx:id="btnRemCustom" layoutX="170.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#openCustomDay" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="Customized date and time" textAlignment="CENTER" wrapText="true">
+            <DatePicker fx:id="datePickExpirationDate" editable="false" layoutX="510.0" layoutY="114.0" prefHeight="50.0" prefWidth="350.0" promptText="Expiration Date" style="-fx-font-size: 24; -fx-border-radius: 10; -fx-background-radius: 10;" />
+            <Button fx:id="btnRemCustom" layoutX="163.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#openCustomDay" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="Customized date and time" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Label fx:id="lblMessageNewTask" alignment="CENTER" layoutX="25.0" layoutY="76.0" prefHeight="60.0" prefWidth="826.0" textAlignment="CENTER" textFill="#860000" wrapText="true">
+            <Label fx:id="lblMessageNewTask" alignment="CENTER" layoutX="18.0" layoutY="70.0" prefHeight="60.0" prefWidth="826.0" textAlignment="CENTER" textFill="#860000" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button fx:id="btnAddNewTask" layoutX="215.0" layoutY="540.0" mnemonicParsing="false" onAction="#handleBtnAddNewTask" prefHeight="60.0" prefWidth="170.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text="Add Task" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnAddNewTask" layoutX="228.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleBtnAddNewTask" prefHeight="60.0" prefWidth="170.0" style="-fx-background-color: #373D20; -fx-background-radius: 30; -fx-border-color: #BCBD8B; -fx-border-radius: 20;" text="Add Task" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancelAddTask" layoutX="505.0" layoutY="540.0" mnemonicParsing="false" onAction="#handleBtnCancel" prefHeight="60.0" prefWidth="170.0" style="-fx-background-color: #000000; -fx-background-radius: 30;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnCancelAddTask" layoutX="493.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleBtnCancel" prefHeight="60.0" prefWidth="170.0" style="-fx-background-color: #373D20; -fx-background-radius: 30; -fx-border-color: #BCBD8B; -fx-border-radius: 20;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Spinner fx:id="spinnerHours" layoutX="517.0" layoutY="284.0" prefHeight="50.0" prefWidth="150.0" />
-            <Spinner fx:id="spinnerMinutes" layoutX="677.0" layoutY="284.0" prefHeight="50.0" prefWidth="150.0" />
-            <Label layoutX="557.0" layoutY="204.0" text="Expiration Time">
+            <Spinner fx:id="spinnerHours" layoutX="508.0" layoutY="236.0" prefHeight="50.0" prefWidth="150.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+            <Spinner fx:id="spinnerMinutes" layoutX="671.0" layoutY="236.0" prefHeight="50.0" prefWidth="150.0" />
+            <Label layoutX="510.0" layoutY="67.0" text="Expiration Time" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
             </Label>
-            <Label layoutX="554.0" layoutY="247.0" text="Hours">
+            <Label layoutX="509.0" layoutY="190.0" text="Hours" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="714.0" layoutY="247.0" text="Minutes">
+            <Label layoutX="669.0" layoutY="190.0" text="Minutes" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <ComboBox fx:id="cBoxCategory" layoutX="502.0" layoutY="358.0" prefHeight="45.0" prefWidth="350.0" promptText="Category" style="-fx-font-size: 24; -fx-background-color: #ffffff; -fx-prompt-text-fill: #737373;" />
-            <Label layoutX="64.0" layoutY="39.0" prefHeight="46.0" prefWidth="252.0" text="Create Task" textFill="#373d20">
+            <ComboBox fx:id="cBoxCategory" layoutX="510.0" layoutY="306.0" prefHeight="51.0" prefWidth="323.0" promptText="Category" style="-fx-font-size: 24; -fx-background-color: #ffffff; -fx-prompt-text-fill: #737373; -fx-background-radius: 10;" />
+            <Label layoutX="26.0" layoutY="33.0" prefHeight="46.0" prefWidth="252.0" text="CREATE TASK" textFill="WHITE">
                <font>
-                  <Font size="36.0" />
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Label>
          </children>
